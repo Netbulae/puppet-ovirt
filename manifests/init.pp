@@ -55,21 +55,19 @@ class ovirt (
   $storageType     = $ovirt::params::storage,
   $organization    = $ovirt::params::organization,
   $applicationMode = $ovirt::params::applicationMode,
-  $firewallManager = $ovirt::params::firewallManager,
-) {
-  # Include Puppetlabs standard library
-  include stdlib
-
-  # Include parameters
-  include ovirt::params
+  $firewallManager = $ovirt::params::firewallManager) inherits ovirt::params {
+  # Require class yum to have the relevant repositories in place
+  require yum
+  require yum::config::ovirt
 
   # Start workflow
   if $ovirt::params::linux {
-    anchor { 'ovirt::start': }
-    -> class { 'ovirt::package::repo': }
-    -> class { 'ovirt::package': }
-    ~> class { 'ovirt::config': }
-    ~> class { 'ovirt::service': }
-    ~> anchor { 'ovirt::end': }
+    contain ovirt::package
+    contain ovirt::config
+    contain ovirt::service
+
+    Class['ovirt::package'] ->
+    Class['ovirt::config'] ->
+    Class['ovirt::service']
   }
 }

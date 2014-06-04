@@ -44,4 +44,6 @@ class ovirt::params {
   $organization    = 'default-company'
   $applicationMode = 'both'
   $firewallManager = 'iptables'
+  $dbUser          = 'ovirt'
+  $dbPassword      = 'ovirt'
 }
