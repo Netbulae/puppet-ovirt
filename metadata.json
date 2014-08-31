@@ -1,0 +1,35 @@
+{
+  "author": "Thomas Bendler \u003cproject@bendler-net.de\u003e",
+  "checksums": {
+    "manifests/package.pp": "da55eed98d89f51e00dae170bae21edb",
+    "tests/engine.pp": "b24ff275bc48cdf6976d11f1593829f9",
+    "manifests/service.pp": "d29693225c37c43dc7ae4898b92b4d7b",
+    "templates/srv/ovirt/answers.erb": "05545311ab233e0e998ed03e3af6612c",
+    "manifests/package/repo.pp": "d60e599a41c164b10d9a80b37c3331f0",
+    "Modulefile": "7e3456e2e26968d2c574faf4365b54d1",
+    "tests/init.pp": "ae255905cfcd1d1320c954d807d1a50b",
+    "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+    "README.markdown": "01790a7b0dd7ac266746a6375f693b8f",
+    "LICENSE": "0e118ca5f3fa18e200a0f493ad21a18e",
+    "manifests/params.pp": "d6eafedc8587bb55032e6cf78f32dbc9",
+    "templates/etc/yum.repos.d/ovirt.repo.erb": "894e73325ac6f9af8f660933455bcc8d",
+    "manifests/init.pp": "bcab03f538d98b60cc80805fc9e2688f",
+    "tests/node.pp": "c0d604d60bcb76df01b650e1a31279a6",
+    "manifests/config.pp": "76fed1bd41e19a268ebad7a1384f6d45",
+    "CHANGELOG": "d98b8354d5fa700724df887222a7453a"
+  },
+  "dependencies": [
+    {
+      "name": "thbe/yum",
+      "version_requirement": "\u003e\u003d0.3.0"
+    }
+  ],
+  "description": "oVirt management module",
+  "license": "GPLv3",
+  "name": "thbe-ovirt",
+  "project_page": "https://github.com/thbe/puppet-ovirt.git",
+  "source": "https://github.com/thbe/puppet-ovirt.git",
+  "summary": "oVirt management module",
+  "types": [],
+  "version": "0.1.0"
+}
